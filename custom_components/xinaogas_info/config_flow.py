@@ -152,23 +152,23 @@ class XinaoGasInfoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if current_standard == GAS_BILLING_YEAR_阶梯:
             schema = {
                 vol.Required(CONF_GAS_YEAR_LADDER_START, default=existing_data.get(CONF_GAS_YEAR_LADDER_START, "0101")): cv.string,
-                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 360)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 600)): cv.positive_float,
                 vol.Required(CONF_GAS_LADDER_LEVEL_2, default=existing_data.get(CONF_GAS_LADDER_LEVEL_2, 600)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.65)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 2.85)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.50)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.66)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 3.46)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.46)): cv.positive_float,
             }
         elif current_standard == GAS_BILLING_MONTH_阶梯:
             schema = {
-                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 30)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 50)): cv.positive_float,
                 vol.Required(CONF_GAS_LADDER_LEVEL_2, default=existing_data.get(CONF_GAS_LADDER_LEVEL_2, 50)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.65)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 2.85)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.50)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.66)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 3.46)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.46)): cv.positive_float,
             }
         elif current_standard == GAS_BILLING_平均单价:
             schema = {
-                vol.Required(CONF_GAS_AVERAGE_PRICE, default=existing_data.get(CONF_GAS_AVERAGE_PRICE, 2.65)): cv.positive_float,
+                vol.Required(CONF_GAS_AVERAGE_PRICE, default=existing_data.get(CONF_GAS_AVERAGE_PRICE, 2.66)): cv.positive_float,
             }
 
         return schema
@@ -300,23 +300,23 @@ class XinaoGasInfoOptionsFlowHandler(config_entries.OptionsFlow):
         if current_standard == GAS_BILLING_YEAR_阶梯:
             schema = {
                 vol.Required(CONF_GAS_YEAR_LADDER_START, default=existing_data.get(CONF_GAS_YEAR_LADDER_START, "0101")): cv.string,
-                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 360)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 600)): cv.positive_float,
                 vol.Required(CONF_GAS_LADDER_LEVEL_2, default=existing_data.get(CONF_GAS_LADDER_LEVEL_2, 600)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.65)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 2.85)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.50)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.66)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 3.46)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.46)): cv.positive_float,
             }
         elif current_standard == GAS_BILLING_MONTH_阶梯:
             schema = {
-                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 30)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_LEVEL_1, default=existing_data.get(CONF_GAS_LADDER_LEVEL_1, 50)): cv.positive_float,
                 vol.Required(CONF_GAS_LADDER_LEVEL_2, default=existing_data.get(CONF_GAS_LADDER_LEVEL_2, 50)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.65)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 2.85)): cv.positive_float,
-                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.50)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_1, default=existing_data.get(CONF_GAS_LADDER_PRICE_1, 2.66)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_2, default=existing_data.get(CONF_GAS_LADDER_PRICE_2, 3.46)): cv.positive_float,
+                vol.Required(CONF_GAS_LADDER_PRICE_3, default=existing_data.get(CONF_GAS_LADDER_PRICE_3, 3.46)): cv.positive_float,
             }
         elif current_standard == GAS_BILLING_平均单价:
             schema = {
-                vol.Required(CONF_GAS_AVERAGE_PRICE, default=existing_data.get(CONF_GAS_AVERAGE_PRICE, 2.65)): cv.positive_float,
+                vol.Required(CONF_GAS_AVERAGE_PRICE, default=existing_data.get(CONF_GAS_AVERAGE_PRICE, 2.66)): cv.positive_float,
             }
 
         return schema
