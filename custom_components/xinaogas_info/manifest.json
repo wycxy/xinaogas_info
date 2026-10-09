@@ -1,0 +1,11 @@
+{
+  "domain": "xinaogas_info",
+  "name": "新奥燃气信息",
+  "codeowners": ["@wycxy"],
+  "config_flow": true,
+  "documentation": "https://github.com/wycxy/xinaogas_info",
+  "iot_class": "cloud_polling",
+  "after_dependencies": ["xinaogas"],
+  "startup_after": ["xinaogas"],
+  "version": "1.0.0"
+}

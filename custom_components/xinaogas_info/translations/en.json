@@ -1,0 +1,80 @@
+{
+  "config": {
+    "step": {
+      "gas_consumer": {
+        "title": "Select Gas Account",
+        "description": "Please select the Xinao Gas account to use (data from xinaogas integration)",
+        "data": {
+          "consumer_number": "Gas Payment Number"
+        }
+      },
+      "gas_billing": {
+        "title": "Select Gas Billing Standard",
+        "data": {
+          "gas_billing_standard": "Gas Ladder Billing Standard"
+        }
+      },
+      "gas_billing_config": {
+        "title": "{standard} Configuration",
+        "data": {
+          "gas_ladder_level_1": "First Ladder Level (m³)",
+          "gas_ladder_level_2": "Second Ladder Level (m³)",
+          "gas_ladder_price_1": "First Ladder Price (CNY/m³)",
+          "gas_ladder_price_2": "Second Ladder Price (CNY/m³)",
+          "gas_ladder_price_3": "Third Ladder Price (CNY/m³)",
+          "gas_year_ladder_start": "Yearly Ladder Start Date (MMDD format, e.g. 0101)",
+          "gas_average_price": "Average Price (CNY/m³)"
+        }
+      }
+    },
+    "error": {
+      "gas_not_configured": "Xinao Gas integration not found. Please ensure xinaogas integration is installed and configured"
+    }
+  },
+  "options": {
+    "step": {
+      "gas_consumer": {
+        "title": "Select Gas Account",
+        "description": "Please select the Xinao Gas account to use (data from xinaogas integration)",
+        "data": {
+          "consumer_number": "Gas Payment Number"
+        }
+      },
+      "gas_billing": {
+        "title": "Select Gas Billing Standard",
+        "data": {
+          "gas_billing_standard": "Gas Ladder Billing Standard"
+        }
+      },
+      "gas_billing_config": {
+        "title": "{standard} Configuration",
+        "data": {
+          "gas_ladder_level_1": "First Ladder Level (m³)",
+          "gas_ladder_level_2": "Second Ladder Level (m³)",
+          "gas_ladder_price_1": "First Ladder Price (CNY/m³)",
+          "gas_ladder_price_2": "Second Ladder Price (CNY/m³)",
+          "gas_ladder_price_3": "Third Ladder Price (CNY/m³)",
+          "gas_year_ladder_start": "Yearly Ladder Start Date (MMDD format, e.g. 0101)",
+          "gas_average_price": "Average Price (CNY/m³)"
+        }
+      }
+    },
+    "error": {
+      "gas_not_configured": "Xinao Gas integration not found. Please ensure xinaogas integration is installed and configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "xinao_gas": {
+        "name": "Xinao Gas",
+        "state_attributes": {
+          "balance": { "name": "Account Balance" },
+          "meter_reading": { "name": "Meter Reading" },
+          "valve_status": { "name": "Valve Status" },
+          "battery_status": { "name": "Battery Status" },
+          "daily_cost": { "name": "Daily Average Cost" }
+        }
+      }
+    }
+  }
+}

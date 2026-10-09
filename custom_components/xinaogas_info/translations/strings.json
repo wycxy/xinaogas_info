@@ -1,0 +1,45 @@
+{
+  "title": "新奥燃气信息",
+  "config": {
+    "step": {
+      "gas_consumer": {
+        "title": "选择燃气户号",
+        "data": {
+          "consumer_number": "燃气缴费号"
+        }
+      },
+      "gas_billing": {
+        "title": "选择燃气计费标准",
+        "data": {
+          "gas_billing_standard": "计费标准"
+        }
+      },
+      "gas_billing_config": {
+        "title": "{standard}配置",
+        "data": {
+          "gas_ladder_level_1": "第一阶梯档位（m³）",
+          "gas_ladder_level_2": "第二阶梯档位（m³）",
+          "gas_ladder_price_1": "第一阶梯单价（元/m³）",
+          "gas_ladder_price_2": "第二阶梯单价（元/m³）",
+          "gas_ladder_price_3": "第三阶梯单价（元/m³）",
+          "gas_year_ladder_start": "年阶梯起始日期（MMDD）",
+          "gas_average_price": "平均单价（元/m³）"
+        }
+      }
+    },
+    "error": {
+      "gas_not_configured": "未找到新奥燃气集成"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "xinao_gas": {
+        "name": "新奥燃气",
+        "state_attributes": {
+          "balance": { "name": "账户余额" },
+          "meter_reading": { "name": "抄表数" }
+        }
+      }
+    }
+  }
+}
